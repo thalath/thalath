@@ -5,7 +5,9 @@
 """
 def centimeter_to_meter(centimeter):
     return centimeter / 100
+
 def meter_to_kolometer(meter):
     return meter / 1000
+
 def kilometer_to_meter(kilometer):
     return kilometer * 1000

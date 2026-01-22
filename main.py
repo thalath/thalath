@@ -1,12 +1,23 @@
 import simple_unit_convertion as SUC
 import Temperature_convertion as TTC
 import currency_convertion as CC
+
+"""
+This is my first homework of python basic using console apps to solve some problem
+- convert metter
+- convert currency (USD/ KHR)
+- convert temperature
+
+"""
+
+# Prompt input and convert into Integer
 def get_int_input(prompt):
     try:
         return int(input(prompt))
     except ValueError:
         print("Invalid, please input integer only..!")
 
+# List of main menu items
 def main():    
     while True:
         print("====== Main Menu==========")
@@ -28,7 +39,9 @@ def main():
             break
         else:
             print("wrong choice! please choose from 1 to 4 only...!")
-            
+
+
+# metter convertion   
 def simple_unit_meu():
     """
     1. centimeter to meter(1m = 100cm)
@@ -64,6 +77,7 @@ def simple_unit_meu():
             print("Exting the program...")
             break
 
+#  temperature convertion
 def temperature_menu():
     """
     Celsius to Farenhai formula: (9/5 * Celsius) + 32
@@ -78,19 +92,20 @@ def temperature_menu():
         if choice == 1:
             print()
             print("=====Celsius to Farenheit====")
-            num = get_int_input("Enter value of Centimeter: ")
+            num = get_int_input("Enter value of Celsius: ")
             result = TTC.Celsius_to_Farenhai(num)
             print(f"{num}°C = {result}°F ")
         elif choice == 2:
             print()
             print("=====Farenheit to Celsius====")
-            num = get_int_input("Enter value of Centimeter: ")
+            num = get_int_input("Enter value of Farenheit: ")
             result = TTC.Farenhai_to_Celsius(num)
             print(f"{num}°C = {result}°F ")
         elif choice == 3:
             print("Exiting the Temperature Menu to Main Menu...!")
             break
-            
+
+#  currency convertion 
 def currency_menu():
     """
     1. USD to Khmer riels
